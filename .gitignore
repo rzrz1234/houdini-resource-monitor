@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+*.hip
+*.hiplc
+*.hipnc
+*.log
+.DS_Store

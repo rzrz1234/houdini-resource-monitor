@@ -1,0 +1,37 @@
+{
+  "version": "v005",
+  "files": [
+    {
+      "path": "plugin/python3.11libs/hrm/__init__.py",
+      "sha256": "54f54b38d1f93befab7872864dde1ab427ff5abc61146a8a6599f05b4823323c"
+    },
+    {
+      "path": "plugin/python3.11libs/hrm/metrics.py",
+      "sha256": "e0597b88bd42ad3e7d5f30996b8afebdc094564a120f5d709855be02b91cb0b4"
+    },
+    {
+      "path": "plugin/python3.11libs/hrm/startup.py",
+      "sha256": "da4d8742baaa9deac0a6cb352e5a1078c7e3b74a0cc3fe0e232005f65e92fd40"
+    },
+    {
+      "path": "plugin/python3.11libs/hrm/ui.py",
+      "sha256": "6c130948df281fa73a94e99f3df4e08bd0578a626585a0e765a72b6f04522459"
+    },
+    {
+      "path": "plugin/python3.11libs/pythonrc.py",
+      "sha256": "dbb3ca16222cd1db2313e992e78eac36d41d55c3f7a7d3151209d6a7164332af"
+    },
+    {
+      "path": "plugin/python3.11libs/uiready.py",
+      "sha256": "cd8fbada110dbc0eeeb8942d199d0c78e59a35b00a15fad9f3d13b0dc5ab2e9c"
+    },
+    {
+      "path": "plugin/python3.13libs/pythonrc.py",
+      "sha256": "dbb3ca16222cd1db2313e992e78eac36d41d55c3f7a7d3151209d6a7164332af"
+    },
+    {
+      "path": "plugin/python3.13libs/uiready.py",
+      "sha256": "cd8fbada110dbc0eeeb8942d199d0c78e59a35b00a15fad9f3d13b0dc5ab2e9c"
+    }
+  ]
+}

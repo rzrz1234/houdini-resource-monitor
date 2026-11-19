@@ -1,0 +1,43 @@
+﻿Houdini 顶部资源监控条 v005 便携安装包
+
+支持：Windows，Houdini 21 / 22。
+无需管理员权限，无需联网，无需额外安装 Python 或 PySide6。
+这是 Python / PySide6 界面插件，通过 Houdini Package 加载，不是 HDA。
+
+一、安装
+1. 将整个 ZIP 解压到任意目录，可以是中文路径，也可以放在 U 盘上。
+2. 双击“安装.cmd”，看到“安装成功”后关闭命令窗口。
+3. 启动或重启 Houdini 21 / 22。
+
+安装器会将插件复制到当前用户的：
+%LOCALAPPDATA%\HoudiniResourceMonitor\v005\plugin
+然后在 Windows“文档”目录中的 houdini21.0 / houdini22.0 的 packages 下写入加载配置。
+因此安装完成后可以删除 ZIP、删除解压目录或拔出 U 盘。
+安装只对当前 Windows 用户生效；其他 Windows 用户需要各自安装。
+重复安装不会创建两条监控栏。已有同名加载配置会被备份，卸载时恢复。
+
+二、使用
+默认显示 CPU、GPU、RAM、VRAM，与 Houdini 顶部菜单并排，位于 Main 右侧。
+CPU / GPU 显示整机利用率；RAM / VRAM 显示整机已用容量与总容量。
+默认每秒刷新。右键监控条可调整刷新周期、选择显卡和菜单行左侧留白。
+如果电脑的菜单更宽，请增大左侧留白，避免覆盖菜单。
+窗口过窄时监控条自动隐藏；放大窗口后恢复。
+
+三、显卡兼容
+GPU / VRAM 通过 NVIDIA 驱动附带的 nvidia-smi 采样。
+AMD / Intel 显卡或缺少 NVIDIA 驱动时，GPU / VRAM 显示“不可用”，CPU / RAM 仍可用。
+GPU 统计口径为 NVIDIA 整卡利用率，与任务管理器的单引擎曲线可能不同。
+
+四、卸载
+双击本包“卸载.cmd”，再重启 Houdini。
+没有本包时，也可在插件安装目录找到“卸载.cmd”。
+卸载仅移除本插件配置，或恢复安装前同名配置；不删除场景、其他插件或用户目录。
+卸载会保留插件文件，不再自动加载。曾装过旧版时，恢复的旧配置可能仍加载旧版插件。
+
+五、特殊用户目录
+默认使用 Windows 系统登记的“文档”目录，兼容文档目录重定向。
+若自行设置了 HOUDINI_USER_PREF_DIR 或通过启动器指定了其他用户目录，
+可用 PowerShell 执行 manage.ps1，并通过 -DocumentsRoot 指定其父目录。
+该目录下应包含 houdini21.0 / houdini22.0 文件夹。
+
+安装过程不请求网络，不上传数据，不修改 HIP 工程，不安装驱动，不修改系统执行策略。

@@ -1,0 +1,5 @@
+@echo off
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0manage.ps1" -Action Uninstall
+set "result=%errorlevel%"
+pause
+exit /b %result%
